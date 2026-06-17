@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WorkSource, Real Talent. Real Jobs. Verified Every Step.</title>
+<meta name="description" content="WorkSource is the ID-verified hiring marketplace. Verified identities, real confirmed work history, and matches built on genuine fit, so employers stop drowning in applications and job seekers get a clear answer on every decision. Launching in Charlotte this summer. Join the waitlist." />
+<meta name="theme-color" content="#00316D" />
+<link rel="canonical" href="https://theworksource.com" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WorkSource" />
+<meta property="og:title" content="WorkSource, Real Talent. Real Jobs. Verified Every Step." />
+<meta property="og:description" content="The ID-verified hiring marketplace. Launching in Charlotte this summer. Join the waitlist." />
+<meta property="og:url" content="https://theworksource.com" />
+<meta property="og:image" content="https://theworksource.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WorkSource, Real Talent. Real Jobs. Verified Every Step." />
+<meta name="twitter:description" content="The ID-verified hiring marketplace. Launching in Charlotte this summer." />
+<meta name="twitter:image" content="https://theworksource.com/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#00316D;          /* brand primary */
+  --navy-press:#002654;    /* hover shade of navy */
+  --mist:#E4E8F1;          /* brand neutral light */
+  --black:#000000;         /* brand neutral dark */
+  --white:#FFFFFF;
+  --ink:#0B1B33;           /* near-black navy, body text on light */
+  --muted:#46556F;         /* secondary text on light */
+  --line-light:#D2D9E6;    /* hairline on light */
+  --line-dark:rgba(255,255,255,.18); /* hairline on navy */
+  --soft-dark:rgba(255,255,255,.72);
+  --maxw:1180px;
+  --ease:cubic-bezier(.4,0,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink);background:var(--navy);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+
+/* ---- tagline / eyebrow ---- */
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+
+/* ---- buttons (flat, no shadow) ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:600;font-size:15px;letter-spacing:.01em;padding:15px 28px;border-radius:4px;
+  cursor:pointer;border:1.5px solid transparent;transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease);white-space:nowrap;
+}
+.btn svg{width:17px;height:17px}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--white);color:var(--navy);border-color:var(--white)}
+.btn-primary:hover{background:var(--mist);border-color:var(--mist)}
+.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55)}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:var(--white)}
+.btn-navy{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.btn-navy:hover{background:var(--navy-press);border-color:var(--navy-press)}
+
+/* ---- header ---- */
+header.site{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.site.scrolled{background:var(--navy);border-bottom:1px solid var(--line-dark)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;max-width:var(--maxw);margin:0 auto}
+.nav .logo{height:24px;width:auto}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.nav-actions .btn{padding:11px 20px;font-size:14px}
+@media(max-width:620px){.nav-actions{display:none}}
+
+/* ---- hero ---- */
+.hero{background:var(--navy);color:var(--white);padding:160px 0 86px}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:44px}}
+.hero .eyebrow{color:var(--mist);display:inline-flex;align-items:center;gap:10px}
+.hero .eyebrow .tick{display:inline-flex;width:18px;height:18px}
+.hero h1{font-weight:800;letter-spacing:-.02em;line-height:1.14;font-size:clamp(34px,5.4vw,62px);margin:22px 0 0}
+.hero .rule{width:64px;height:2px;background:var(--white);margin:26px 0 22px;opacity:.85}
+.hero p.lead{font-size:clamp(16px,1.7vw,19px);color:var(--soft-dark);max-width:540px;font-weight:400}
+.hero-cta{display:flex;gap:14px;margin:32px 0 28px;flex-wrap:wrap}
+.trust-row{display:flex;gap:24px;flex-wrap:wrap;color:var(--mist);font-size:13.5px;font-weight:500}
+.trust-row span{display:inline-flex;align-items:center;gap:8px}
+.trust-row svg{width:17px;height:17px}
+
+/* verified card (flat, bordered, no shadow) */
+.vcard{background:var(--white);border:1px solid var(--line-light);border-radius:8px;padding:26px;color:var(--ink)}
+.vcard-top{display:flex;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line-light)}
+.vcard-avatar{width:50px;height:50px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;flex-shrink:0}
+.vcard-name{font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px;color:var(--ink)}
+.vchip{display:inline-flex;align-items:center;gap:5px;background:var(--mist);color:var(--navy);font-size:11px;font-weight:700;padding:3px 9px;border-radius:3px;letter-spacing:.02em}
+.vchip svg{width:12px;height:12px}
+.vcard-role{color:var(--muted);font-size:13px;margin-top:2px}
+.vrows{margin-top:18px;display:flex;flex-direction:column}
+.vrow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line-light)}
+.vrow:last-child{border-bottom:none}
+.vrow .lbl{font-size:14px;color:var(--ink)}
+.vrow .ok{display:inline-flex;align-items:center;gap:6px;color:var(--navy);font-size:12.5px;font-weight:700}
+.vrow .ok svg{width:16px;height:16px}
+.vmatch{margin-top:8px;background:var(--mist);border-radius:6px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.vmatch .t{font-size:12.5px;color:var(--muted)}
+.vmatch .t b{display:block;color:var(--ink);font-size:13.5px;font-weight:600;margin-top:2px}
+.vmatch .pct{font-size:26px;font-weight:800;color:var(--navy);line-height:1}
+
+/* stat strip */
+.statstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:30px 0;margin-top:64px}
+@media(max-width:720px){.statstrip{grid-template-columns:repeat(2,1fr);gap:26px}}
+.stat .n{font-size:clamp(26px,3.6vw,36px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1}
+.stat .l{color:var(--mist);font-size:13px;margin-top:8px;font-weight:400}
+
+/* ---- generic sections ---- */
+.sec{padding:92px 0}
+@media(max-width:600px){.sec{padding:64px 0}}
+.band-navy{background:var(--navy);color:#fff}
+.band-mist{background:var(--mist);color:var(--ink)}
+.band-white{background:var(--white);color:var(--ink)}
+.sec-head{max-width:720px}
+.sec-head.center{margin:0 auto;text-align:center}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.band-navy .kicker{color:var(--mist)}
+.band-mist .kicker,.band-white .kicker{color:var(--navy)}
+h2.sec-title{font-size:clamp(27px,3.6vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:14px 0 0}
+.head-rule{width:60px;height:2px;background:currentColor;opacity:.85;margin:22px 0}
+.sec-head.center .head-rule{margin-left:auto;margin-right:auto}
+.sec-sub{font-size:16.5px;font-weight:400}
+.band-navy .sec-sub{color:var(--soft-dark)}
+.band-mist .sec-sub,.band-white .sec-sub{color:var(--muted)}
+h1,h2.sec-title{text-wrap:balance}
+.sec-sub,.hero p.lead,.aud .desc,.feat p,.step p{text-wrap:pretty}
+
+/* ---- broken list (navy, like the social post) ---- */
+.broken-wrap{border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);margin-top:46px;padding:40px 0}
+.broken-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 56px}
+@media(max-width:680px){.broken-grid{grid-template-columns:1fr}}
+.broken-item{display:flex;align-items:center;gap:14px;font-size:17px;font-weight:500;color:#fff;padding:8px 0}
+.broken-item .bx{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,.5);border-radius:50%}
+.broken-item .bx svg{width:13px;height:13px;color:#fff}
+
+/* ---- fix features ---- */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:54px}
+@media(max-width:880px){.feat-grid{grid-template-columns:1fr;gap:30px}}
+.feat{padding-top:26px;border-top:2px solid var(--navy)}
+.feat .ic{width:46px;height:46px;margin-bottom:18px}
+.feat h3{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:9px;letter-spacing:-.01em}
+.feat p{color:var(--muted);font-size:15px}
+
+/* ---- audience split (navy, vertical divider) ---- */
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:50px;border-top:1px solid var(--line-dark)}
+@media(max-width:820px){.aud-grid{grid-template-columns:1fr}}
+.aud{padding:46px 48px}
+.aud:first-child{border-right:1px solid var(--line-dark)}
+@media(max-width:820px){.aud:first-child{border-right:none;border-bottom:1px solid var(--line-dark)}}
+.aud .tag{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+.aud h3{font-size:25px;font-weight:800;color:#fff;margin:12px 0 6px;letter-spacing:-.01em}
+.aud .desc{color:var(--soft-dark);font-size:15px;margin-bottom:24px}
+.aud ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.aud li{display:flex;gap:13px;align-items:flex-start;font-size:15px;color:#fff;font-weight:400}
+.aud li svg{width:19px;height:19px;flex-shrink:0;margin-top:2px;color:#fff}
+
+/* ---- how it works ---- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:54px}
+@media(max-width:780px){.steps{grid-template-columns:1fr;gap:32px}}
+.step{position:relative}
+.step .num{font-size:15px;font-weight:700;color:var(--navy);letter-spacing:.16em;padding-bottom:16px;border-bottom:2px solid var(--navy);margin-bottom:20px;display:block}
+.step h4{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:9px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* ---- faq ---- */
+.faq-wrap{max-width:780px;margin:48px auto 0}
+.faq details{border-bottom:1px solid var(--line-light)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:700;font-size:17px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pl{flex-shrink:0;width:18px;height:18px;position:relative;transition:transform .25s var(--ease)}
+.faq details[open] summary .pl{transform:rotate(45deg)}
+.faq summary .pl::before,.faq summary .pl::after{content:"";position:absolute;background:var(--navy);border-radius:2px}
+.faq summary .pl::before{left:8px;top:0;width:2px;height:18px}
+.faq summary .pl::after{top:8px;left:0;height:2px;width:18px}
+.faq details p{padding:0 0 22px;margin-top:-4px;color:var(--muted);font-size:15.5px;max-width:94%}
+
+/* ---- waitlist ---- */
+.wl-card{background:var(--white);border-radius:10px;overflow:hidden;max-width:680px;margin:46px auto 0;color:var(--ink);border:1px solid rgba(255,255,255,.14)}
+.wl-tabs{display:grid;grid-template-columns:1fr 1fr}
+.wl-tab{padding:18px 14px;text-align:center;font-weight:600;font-size:15px;cursor:pointer;color:var(--muted);background:var(--mist);border:none;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:9px;transition:color .2s,background .2s;border-bottom:3px solid transparent}
+.wl-tab svg{width:18px;height:18px}
+.wl-tab.active{background:var(--white);color:var(--navy);border-bottom-color:var(--navy)}
+.wl-body{padding:36px}
+@media(max-width:560px){.wl-body{padding:24px}}
+.wl-body h3{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
+.wl-body .sub{font-size:14.5px;color:var(--muted);margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:7px}
+.field input,.field select{width:100%;padding:14px 15px;border:1.5px solid var(--line-light);border-radius:5px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s}
+.field input::placeholder{color:#9aa5b8}
+.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2346556F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px;cursor:pointer}
+.field select:invalid{color:#9aa5b8}
+.field input:focus,.field select:focus{outline:none;border-color:var(--navy)}
+.field .opt{color:#9aa5b8;font-weight:400}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+.wl-submit{width:100%;margin-top:8px;font-size:16px;padding:16px}
+.wl-fine{font-size:12px;color:#9aa5b8;text-align:center;margin-top:14px}
+.wl-success{display:none;text-align:center;padding:14px 0}
+.wl-success .ring{width:64px;height:64px;margin:0 auto 18px}
+.wl-success h3{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.wl-success p{color:var(--muted);font-size:15px;max-width:380px;margin:0 auto}
+.form-err{display:none;background:#FBEDEE;border:1px solid #E7C3C6;color:#9B2C31;font-size:13.5px;padding:11px 14px;border-radius:5px;margin-bottom:16px}
+
+/* ---- footer ---- */
+footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:28px}
+.foot-top .flogo{height:30px}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:14px}
+.foot-links a:hover{color:#fff}
+.foot-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;margin-top:22px;color:rgba(255,255,255,.42)}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---- tablet / iPad ---- */
+@media(max-width:1024px){
+  .wrap{padding:0 32px}
+  .hero{padding:150px 0 76px}
+  .broken-grid{gap:12px 40px}
+}
+/* ---- phone ---- */
+@media(max-width:620px){
+  .wrap{padding:0 20px}
+  .nav{padding:16px 20px}
+  .nav .logo{height:22px}
+  .hero{padding:116px 0 56px}
+  .hero h1{font-size:clamp(32px,8.6vw,46px);line-height:1.16;margin-top:18px}
+  .hero .rule{margin:22px 0 20px}
+  .hero-cta{gap:11px}
+  .hero-cta .btn{flex:1 1 100%}
+  .trust-row{gap:14px 20px;font-size:13px}
+  .statstrip{margin-top:46px;padding:24px 0;gap:22px 18px}
+  .vcard{padding:22px}
+  .sec{padding:56px 0}
+  h2.sec-title{font-size:clamp(25px,7.4vw,34px)}
+  .head-rule{margin:18px 0}
+  .broken-wrap{margin-top:34px;padding:30px 0}
+  .broken-item{font-size:15.5px;gap:12px}
+  .feat-grid{margin-top:40px;gap:26px}
+  .aud-grid{margin-top:36px}
+  .aud{padding:32px 22px}
+  .aud h3{font-size:22px}
+  .steps{margin-top:40px}
+  .wl-card{margin-top:36px}
+  .wl-tab{font-size:13.5px;padding:16px 8px;gap:7px}
+  .wl-body{padding:24px 20px}
+  .foot-top{gap:22px}
+  .foot-bot{flex-direction:column;gap:8px}
+}
+@media(max-width:380px){
+  .wl-tab{font-size:12.5px}
+  .wl-tab svg{display:none}
+}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site" id="siteHeader">
+  <div class="nav">
+    <a href="#top" aria-label="WorkSource home"><img class="logo" src="/logo-white.svg" alt="WorkSource" /></a>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="#waitlist" data-target="seeker">Job Seekers</a>
+      <a class="btn btn-primary" href="#waitlist" data-target="employer">Employers</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg></span>Launching in Charlotte · this summer</span>
+        <h1 class="reveal d1">Real talent.<br>Real jobs.<br>Verified every step.</h1>
+        <div class="rule reveal d1"></div>
+        <p class="lead reveal d2">WorkSource is the ID-verified hiring marketplace. Identities are verified, work history is real and confirmed, not just claimed, and you're matched to roles that genuinely fit. No paywalls. No noise. No silent rejections.</p>
+        <div class="hero-cta reveal d2">
+          <a class="btn btn-primary" href="#waitlist" data-target="seeker">Join as a Job Seeker
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-outline" href="#waitlist" data-target="employer">Join as an Employer</a>
+        </div>
+        <div class="trust-row reveal d3">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>ID-verified both sides</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Verified work history</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-5.2-7-11a7 7 0 1114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Charlotte-first</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.6 13.4L13.4 20.6a2 2 0 01-2.8 0l-7-7V4h9.6z"/><circle cx="7.8" cy="7.8" r="1.3"/></svg>Free to join</span>
+        </div>
+      </div>
+
+      <div class="vcard reveal d2" aria-hidden="true">
+        <div class="vcard-top">
+          <div class="vcard-avatar">JR</div>
+          <div>
+            <div class="vcard-name">Jordan R. <span class="vchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Verified</span></div>
+            <div class="vcard-role">Service Advisor · Charlotte, NC</div>
+          </div>
+        </div>
+        <div class="vrows">
+          <div class="vrow"><span class="lbl">Identity</span><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Verified</span></div>
+          <div class="vrow"><span class="lbl">Work history · Queen City Auto</span><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Verified</span></div>
+          <div class="vrow"><span class="lbl">Certifications</span><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Verified</span></div>
+        </div>
+        <div class="vmatch">
+          <div class="t">Match to your open role<b>Meets your requirements</b></div>
+          <div class="pct" style="font-size:16px;font-weight:800;letter-spacing:0">Strong fit</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WHAT'S BROKEN ===== -->
+<section class="sec band-navy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The problem</span>
+      <h2 class="sec-title">What's broken in hiring today</h2>
+      <div class="head-rule"></div>
+      <p class="sec-sub">The biggest job boards make more money when you <em style="font-style:normal;border-bottom:2px solid rgba(255,255,255,.45)">don't</em> get hired, the longer you search, the more you're worth to them. The clutter, the fakes, and the noise aren't bugs. They're the business model.</p>
+    </div>
+    <div class="broken-wrap reveal d1">
+      <div class="broken-grid">
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Pay-to-play platforms</div>
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Fake job postings</div>
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Ghosting</div>
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Inflated resumes</div>
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Unverified work history</div>
+        <div class="broken-item"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M18 6L6 18M6 6l12 12"/></svg></span>Employers drowning in applications</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PULL QUOTE ===== -->
+<section class="band-mist" style="padding:74px 0">
+  <div class="wrap">
+    <p class="reveal" style="max-width:900px;margin:0 auto;text-align:center;font-size:clamp(22px,3.3vw,34px);font-weight:800;letter-spacing:-.015em;line-height:1.28;color:var(--navy);text-wrap:balance">We solved trust in banking, in ride-sharing, in dating apps. Hiring is still the Wild West.</p>
+  </div>
+</section>
+
+<!-- ===== THE FIX ===== -->
+<section class="sec band-white">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The fix</span>
+      <h2 class="sec-title">Trust, built in before the first conversation</h2>
+      <div class="head-rule"></div>
+      <p class="sec-sub">WorkSource isn't another job board, it's verified hiring infrastructure. It checks fit before the application starts, so neither side wastes time on the wrong match. <strong style="color:var(--navy)">Verified fit before you ever&nbsp;apply.</strong></p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5L16 9"/></svg>
+        <h3>Verified identities</h3>
+        <p>Every job seeker and every employer verifies who they are, designed to reduce fake accounts, scam postings, and inflated profiles before they ever reach you.</p>
+      </div>
+      <div class="feat reveal d1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <h3>Verified work history</h3>
+        <p>Real, confirmed work history you can trust, not a self-reported list of keywords. What someone has actually done, established before you ever talk.</p>
+      </div>
+      <div class="feat reveal d2">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+        <h3>Built for genuine fit</h3>
+        <p>Job seekers spend their time on roles that truly fit, and employers meet candidates who match what they need. Less noise, less wasted time, better hires.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIENCE SPLIT ===== -->
+<section class="sec band-navy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Built for both sides</span>
+      <h2 class="sec-title">One platform. Two wins.</h2>
+      <div class="head-rule"></div>
+    </div>
+    <div class="aud-grid reveal d1">
+      <div class="aud">
+        <span class="tag">For Job Seekers</span>
+        <h3>Get seen for who you really are</h3>
+        <p class="desc">Create one verified profile, see the jobs that actually fit, and stop applying into black holes.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Your verified work history matters more than keywords on a resume</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Spend your time only on roles that genuinely fit, no dead-end applications</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>No paywalls to be seen, and a clear answer on every decision, so you're never left guessing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>A reusable, portable record of verified experience</li>
+        </ul>
+        <a class="btn btn-primary" href="#waitlist" data-target="seeker">Join the Job Seeker waitlist</a>
+      </div>
+      <div class="aud">
+        <span class="tag">For Employers</span>
+        <h3>Stop sorting. Start hiring.</h3>
+        <p class="desc">Post a role, define what you actually need, and review verified, aligned candidates before your time is wasted, fewer, better applicants, not a flood.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Verified, qualified candidates, the right people reach you</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Every applicant is ID-verified with verified work history</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Free to post, review, and hire, pay only if you want multiple roles open at once</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Everything you need to go from first message to a confident hire</li>
+        </ul>
+        <a class="btn btn-primary" href="#waitlist" data-target="employer">Join the Employer waitlist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="sec band-mist">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">How it works</span>
+      <h2 class="sec-title">Verified in three steps</h2>
+      <div class="head-rule"></div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="num">01, VERIFY</span><h4>Confirm who you are</h4><p>Verify your identity once. Employers verify their business; job seekers verify who they are. Trust is established up front.</p></div>
+      <div class="step reveal d1"><span class="num">02, MATCH</span><h4>Matched on real fit</h4><p>Matching is built around genuine qualifications, so seekers focus on roles that fit and employers meet candidates who match what they need.</p></div>
+      <div class="step reveal d2"><span class="num">03, CONNECT</span><h4>Message, interview, hire</h4><p>Connect in-platform from first message to offer, with a clear answer at every step, so you always know where you stand.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FREE / PRICING ===== -->
+<section class="sec band-white">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Pricing</span>
+      <h2 class="sec-title">Free. For real, no gimmicks.</h2>
+      <div class="head-rule"></div>
+      <p class="sec-sub">Most people use WorkSource without ever spending a penny, and free accounts work exactly as well as paid ones. The only thing you can pay for is scale.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        <h3>Free for job seekers</h3>
+        <p>Join, build your verified profile, and get matched, always free. No paywall to be seen, ever.</p>
+      </div>
+      <div class="feat reveal d1">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+        <h3>Free for employers</h3>
+        <p>Every employer gets one active job post, free forever, post a role, review verified candidates, and make a hire without paying a cent. A real free account, not a trial.</p>
+      </div>
+      <div class="feat reveal d2">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <h3>Pay only for scale</h3>
+        <p>Larger employers who want several roles open at the same time can pay for that convenience. Posting one role at a time is free, forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec band-mist">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Questions</span>
+      <h2 class="sec-title">The basics, answered</h2>
+      <div class="head-rule"></div>
+    </div>
+    <div class="faq faq-wrap reveal d1">
+      <details>
+        <summary>What is WorkSource?<span class="pl"></span></summary>
+        <p>WorkSource is a verified hiring marketplace. Both job seekers and employers verify who they are, so every connection starts with trust, and both sides find real fit before anyone wastes time applying or interviewing.</p>
+      </details>
+      <details>
+        <summary>What does it cost?<span class="pl"></span></summary>
+        <p>Job seekers are free, always. Employers are free too: every employer gets one active job post, free forever, enough to post a role, review verified candidates, and make a hire without paying a cent. Paid plans are only for employers who want several roles open at the same time. It's a real free account, not a trial.</p>
+      </details>
+      <details>
+        <summary>How does matching work?<span class="pl"></span></summary>
+        <p>You tell WorkSource what's true: job seekers build one verified profile, and employers post a role and set the requirements that actually matter. WorkSource uses that verified information to surface stronger-fit matches before the application starts. The detailed matching logic is proprietary, but the experience is simple, you spend your time on real fits, not noise.</p>
+      </details>
+      <details>
+        <summary>What does "verified" mean?<span class="pl"></span></summary>
+        <p>Identities are verified on both sides, and work history is confirmed rather than self-reported. Verification is built to reduce fake profiles, scam postings, and resume spam, so the people and roles you see are real.</p>
+      </details>
+      <details>
+        <summary>Do I have to be in Charlotte?<span class="pl"></span></summary>
+        <p>WorkSource is launching in Charlotte first and opening city by city. You can join the waitlist from anywhere, we'll let you know the moment your area opens.</p>
+      </details>
+      <details>
+        <summary>Why should my profile or job post be complete and accurate?<span class="pl"></span></summary>
+        <p>Job seekers: a complete, truthful profile helps surface the roles where you actually meet the employer's requirements. Employers: clear, specific requirements help WorkSource surface stronger-fit candidates, so you review fewer, better applicants.</p>
+      </details>
+      <details>
+        <summary>I joined the waitlist, what happens next?<span class="pl"></span></summary>
+        <p>You'll get launch updates and priority access when your side of the platform opens in your area. No spam, just the heads-up that it's time.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WAITLIST ===== -->
+<section class="sec band-navy" id="waitlist">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Get early access</span>
+      <h2 class="sec-title">Join the waitlist</h2>
+      <div class="head-rule"></div>
+      <p class="sec-sub">People are not clicks. Jobs are not content. Hiring shouldn't feel like gambling. We're launching in Charlotte first, in phases, join for launch updates, early access, and priority when your side opens.</p>
+    </div>
+
+    <div class="wl-card reveal d1">
+      <div class="wl-tabs">
+        <button class="wl-tab active" data-tab="seeker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>I'm a Job Seeker</button>
+        <button class="wl-tab" data-tab="employer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>I'm an Employer</button>
+      </div>
+      <div class="wl-body">
+        <form id="form-seeker" class="wl-form" data-role="job_seeker">
+          <h3>Find work you actually qualify for</h3>
+          <p class="sub">Be first in line when WorkSource opens to job seekers in your area.</p>
+          <div class="form-err" id="err-seeker"></div>
+          <div class="row2">
+            <div class="field"><label>Full name</label><input type="text" name="name" autocomplete="name" placeholder="Jordan Rivera" required /></div>
+            <div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" placeholder="you@email.com" required /></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel" placeholder="(704) 555-0123" required /></div>
+            <div class="field"><label>City &amp; state</label><input type="text" name="location" placeholder="Charlotte, NC" required /></div>
+          </div>
+          <div class="field"><label>Current role &amp; industry <span class="opt">(optional)</span></label><input type="text" name="role_interest" placeholder="e.g. Service Advisor, Automotive" /></div>
+          <div class="row2">
+            <div class="field"><label>How did you hear about us?</label><select name="referral_source" required>
+              <option value="" disabled selected>Select one…</option>
+              <option>Facebook</option><option>Instagram</option><option>TikTok</option><option>LinkedIn</option><option>Through a friend</option><option>Networking event</option><option>Other</option>
+            </select></div>
+            <div class="field"><label>Preferred contact <span class="opt">(optional)</span></label><select name="contact_pref">
+              <option value="" disabled selected>Select one…</option>
+              <option>Email</option><option>Text</option><option>Either</option>
+            </select></div>
+          </div>
+          <label class="field-consent" style="display:flex;gap:9px;align-items:flex-start;margin:2px 0 16px;font-size:13px;line-height:1.45;color:#4a5568;cursor:pointer">
+            <input type="checkbox" name="contact_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" />
+            <span>I agree to be contacted by WorkSource about my waitlist and launch access by email and text message (SMS). Message and data rates may apply. Reply STOP to opt out at any time.</span>
+          </label>
+          <button type="submit" class="btn btn-navy wl-submit">Join the waitlist</button>
+          <p class="wl-fine">We'll only email you about your launch access. No spam, ever.</p>
+        </form>
+        <div class="wl-success" id="success-seeker">
+          <svg class="ring" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+          <h3>You're on the list.</h3>
+          <p>Welcome aboard. We'll reach out with early access the moment WorkSource opens to job seekers near you.</p>
+        </div>
+
+        <form id="form-employer" class="wl-form" data-role="employer" style="display:none">
+          <h3>Build a pipeline of verified, qualified talent</h3>
+          <p class="sub">Get priority access and onboarding when WorkSource opens to employers.</p>
+          <div class="form-err" id="err-employer"></div>
+          <div class="row2">
+            <div class="field"><label>Your name</label><input type="text" name="name" autocomplete="name" placeholder="Marcus Webb" required /></div>
+            <div class="field"><label>Work email</label><input type="email" name="email" autocomplete="email" placeholder="you@company.com" required /></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Phone</label><input type="tel" name="phone" autocomplete="tel" placeholder="(704) 555-0123" required /></div>
+            <div class="field"><label>Company</label><input type="text" name="company" placeholder="Queen City Auto Group" required /></div>
+          </div>
+          <div class="field"><label>Company website <span class="opt">(optional)</span></label><input type="url" name="company_website" placeholder="https://yourcompany.com" /></div>
+          <div class="row2">
+            <div class="field"><label>Company city &amp; state</label><input type="text" name="location" placeholder="Charlotte, NC" required /></div>
+            <div class="field"><label>Your role at the company <span class="opt">(optional)</span></label><input type="text" name="role_interest" placeholder="e.g. Owner, HR Manager" /></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>How did you hear about us?</label><select name="referral_source" required>
+              <option value="" disabled selected>Select one…</option>
+              <option>Facebook</option><option>Instagram</option><option>TikTok</option><option>LinkedIn</option><option>Through a friend</option><option>Networking event</option><option>Other</option>
+            </select></div>
+            <div class="field"><label>Preferred contact <span class="opt">(optional)</span></label><select name="contact_pref">
+              <option value="" disabled selected>Select one…</option>
+              <option>Email</option><option>Text</option><option>Either</option>
+            </select></div>
+          </div>
+          <label class="field-consent" style="display:flex;gap:9px;align-items:flex-start;margin:2px 0 16px;font-size:13px;line-height:1.45;color:#4a5568;cursor:pointer">
+            <input type="checkbox" name="contact_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" />
+            <span>I agree to be contacted by WorkSource about my waitlist and launch access by email and text message (SMS). Message and data rates may apply. Reply STOP to opt out at any time.</span>
+          </label>
+          <button type="submit" class="btn btn-navy wl-submit">Request early access</button>
+          <p class="wl-fine">We'll only email you about your launch access. No spam, ever.</p>
+        </form>
+        <div class="wl-success" id="success-employer">
+          <svg class="ring" viewBox="0 0 24 24" fill="none" stroke="#00316D" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+          <h3>You're on the list.</h3>
+          <p>Thanks for your interest. We'll be in touch with priority onboarding as we open WorkSource to employers in Charlotte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <img class="flogo" src="/logo-white-tagline.svg" alt="WorkSource, Real Talent. Real Jobs. Verified Every Step." />
+      <div class="foot-links">
+        <a href="#top">Home</a>
+        <a href="#waitlist" data-target="seeker">Job Seekers</a>
+        <a href="#waitlist" data-target="employer">Employers</a>
+        <a href="mailto:hello@theworksource.com">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <div>© <span id="yr"></span> WorkSource Global, Inc. All rights reserved.</div>
+      <div>Launching in Charlotte · this summer</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  "use strict";
+  var SUPABASE_URL="https://rlaeiohiwqymjuqbfzch.supabase.co";
+  var SUPABASE_KEY="sb_publishable_2NfweozO7bhtfaSn1YjRhQ_OKHIBktf";
+  var sb=window.supabase?window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY):null;
+  var REF=(new URLSearchParams(location.search).get("ref")||"").trim().toUpperCase()||null;
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var header=document.getElementById('siteHeader');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>24);}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var tabs=document.querySelectorAll('.wl-tab');
+  var seekerDone=false,employerDone=false;
+  function showTab(role){
+    tabs.forEach(function(t){t.classList.toggle('active',t.dataset.tab===role);});
+    document.getElementById('form-seeker').style.display=(role==='seeker'&&!seekerDone)?'':'none';
+    document.getElementById('form-employer').style.display=(role==='employer'&&!employerDone)?'':'none';
+    document.getElementById('success-seeker').style.display=(role==='seeker'&&seekerDone)?'block':'none';
+    document.getElementById('success-employer').style.display=(role==='employer'&&employerDone)?'block':'none';
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){showTab(t.dataset.tab);});});
+  document.querySelectorAll('[data-target]').forEach(function(a){a.addEventListener('click',function(){var tgt=a.dataset.target;setTimeout(function(){showTab(tgt);},50);});});
+
+  function handle(formId,role,errId,successId,doneSetter){
+    var form=document.getElementById(formId);
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var err=document.getElementById(errId);err.style.display='none';
+      var btn=form.querySelector('button[type=submit]');var orig=btn.textContent;
+      btn.disabled=true;btn.textContent='Joining…';
+      var fd=new FormData(form);
+      var payload={role:role,name:(fd.get('name')||'').trim(),email:(fd.get('email')||'').trim().toLowerCase(),
+        phone:(fd.get('phone')||'').trim()||null,location:(fd.get('location')||'').trim()||null,
+        company:(fd.get('company')||'').trim()||null,company_website:(fd.get('company_website')||'').trim()||null,referred_by_code:REF,role_interest:(fd.get('role_interest')||'').trim()||null,
+        referral_source:(fd.get('referral_source')||'').trim()||null,contact_pref:(fd.get('contact_pref')||'').trim()||null,contact_consent:!!fd.get('contact_consent'),
+        meta:{source:'theworksource.com',ua:navigator.userAgent,ts:new Date().toISOString(),consent:!!fd.get('contact_consent'),consent_text:'Agreed to be contacted by WorkSource by email and SMS (waitlist/launch access).'}};
+      function done(){doneSetter();form.style.display='none';document.getElementById(successId).style.display='block';}
+      function fail(msg){btn.disabled=false;btn.textContent=orig;err.textContent=msg||"Something went wrong. Please try again.";err.style.display='block';}
+      if(!sb){fail("Connection issue, please refresh and try again.");return;}
+      sb.from('waitlist').insert(payload).then(function(res){
+        if(res.error){
+          if(res.error.code==='23505'||/duplicate|unique/i.test(res.error.message||'')){done();return;}
+          fail(res.error.message);return;
+        }
+        done();
+      }).catch(function(e){fail(e&&e.message);});
+    });
+  }
+  handle('form-seeker','job_seeker','err-seeker','success-seeker',function(){seekerDone=true;});
+  handle('form-employer','employer','err-employer','success-employer',function(){employerDone=true;});
+})();
+</script>
+</body>
+</html>
