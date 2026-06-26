@@ -551,6 +551,7 @@ footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32
             <input type="checkbox" name="contact_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" />
             <span>I agree to be contacted by WorkSource about my waitlist and launch access by email and text message (SMS). Message and data rates may apply. Reply STOP to opt out at any time.</span>
           </label>
+          <label class="field-consent" style="display:flex;gap:9px;align-items:flex-start;margin:2px 0 16px;font-size:13px;line-height:1.45;color:#4a5568;cursor:pointer"><input type="checkbox" name="terms_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" /><span>I have read and agree to the WorkSource <a href="/terms" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Terms of Service</a>, <a href="/privacy" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Privacy Policy</a>, and <a href="/job-seeker-terms" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Job Seeker Terms</a>.</span></label>
           <button type="submit" class="btn btn-navy wl-submit">Join the waitlist</button>
           <p class="wl-fine">We'll only email you about your launch access. No spam, ever.</p>
         </form>
@@ -591,6 +592,7 @@ footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32
             <input type="checkbox" name="contact_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" />
             <span>I agree to be contacted by WorkSource about my waitlist and launch access by email and text message (SMS). Message and data rates may apply. Reply STOP to opt out at any time.</span>
           </label>
+          <label class="field-consent" style="display:flex;gap:9px;align-items:flex-start;margin:2px 0 16px;font-size:13px;line-height:1.45;color:#4a5568;cursor:pointer"><input type="checkbox" name="terms_consent" required style="margin-top:2px;flex:none;width:16px;height:16px;accent-color:#00316D" /><span>I have read and agree to the WorkSource <a href="/terms" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Terms of Service</a>, <a href="/privacy" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Privacy Policy</a>, and <a href="/employer-terms" target="_blank" rel="noopener" style="color:#00316D;font-weight:600">Employer Terms</a>.</span></label>
           <button type="submit" class="btn btn-navy wl-submit">Request early access</button>
           <p class="wl-fine">We'll only email you about your launch access. No spam, ever.</p>
         </form>
@@ -615,6 +617,16 @@ footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32
         <a href="#waitlist" data-target="employer">Employers</a>
         <a href="mailto:hello@theworksource.com">Contact</a>
       </div>
+      <div class="foot-links foot-legal" style="margin-top:10px">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/job-seeker-terms">Job Seeker Terms</a>
+        <a href="/employer-terms">Employer Terms</a>
+        <a href="/ai-hiring-compliance">AI Hiring Compliance</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookie-policy">Cookies</a>
+        <a href="/equal-opportunity">Equal Opportunity</a>
+      </div>
     </div>
     <div class="foot-bot">
       <div>© <span id="yr"></span> WorkSource Global, Inc. All rights reserved.</div>
@@ -631,6 +643,7 @@ footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32
   var SUPABASE_KEY="sb_publishable_2NfweozO7bhtfaSn1YjRhQ_OKHIBktf";
   var sb=window.supabase?window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY):null;
   var REF=(new URLSearchParams(location.search).get("ref")||"").trim().toUpperCase()||null;
+  var TERMS_VERSION="2026-06-26";
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   var header=document.getElementById('siteHeader');
@@ -663,8 +676,8 @@ footer.site{background:var(--black);color:rgba(255,255,255,.6);padding:56px 0 32
       var payload={role:role,name:(fd.get('name')||'').trim(),email:(fd.get('email')||'').trim().toLowerCase(),
         phone:(fd.get('phone')||'').trim()||null,location:(fd.get('location')||'').trim()||null,
         company:(fd.get('company')||'').trim()||null,company_website:(fd.get('company_website')||'').trim()||null,referred_by_code:REF,role_interest:(fd.get('role_interest')||'').trim()||null,
-        referral_source:(fd.get('referral_source')||'').trim()||null,contact_pref:(fd.get('contact_pref')||'').trim()||null,contact_consent:!!fd.get('contact_consent'),
-        meta:{source:'theworksource.com',ua:navigator.userAgent,ts:new Date().toISOString(),consent:!!fd.get('contact_consent'),consent_text:'Agreed to be contacted by WorkSource by email and SMS (waitlist/launch access).'}};
+        referral_source:(fd.get('referral_source')||'').trim()||null,contact_pref:(fd.get('contact_pref')||'').trim()||null,contact_consent:!!fd.get('contact_consent'),terms_accepted:!!fd.get('terms_consent'),terms_version:TERMS_VERSION,
+        meta:{source:'theworksource.com',ua:navigator.userAgent,ts:new Date().toISOString(),consent:!!fd.get('contact_consent'),consent_text:'Agreed to be contacted by WorkSource by email and SMS (waitlist/launch access).',terms_accepted:!!fd.get('terms_consent'),terms_version:TERMS_VERSION,terms_text:'Agreed to WorkSource Terms of Service, Privacy Policy, and role-specific terms.'}};
       function done(){doneSetter();form.style.display='none';document.getElementById(successId).style.display='block';}
       function fail(msg){btn.disabled=false;btn.textContent=orig;err.textContent=msg||"Something went wrong. Please try again.";err.style.display='block';}
       if(!sb){fail("Connection issue, please refresh and try again.");return;}
